@@ -1,0 +1,157 @@
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    @include flex-center;
+    z-index: 1;
+    visibility: hidden;
+    animation: apparition 3s linear;
+    background-color: #f7f2f2;
+}
+
+.cercle {
+    width: 200px;
+    height: 200px;
+    border: 0px solid #011015;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cercle:nth-child(1) {
+    border-bottom-width: 8px;
+    border-color: $colour-primary;
+    animation: rotate1 2s linear infinite;
+}
+
+.cercle:nth-child(2) {
+    border-bottom-width: 8px;
+    border-color: $colour-secondary;
+    animation: rotate2 2s linear infinite;
+}
+
+.cercle:nth-child(3) {
+    border-bottom-width: 8px;
+    border-color: $colour-tertiaire;
+    animation: rotate3 2s linear infinite;
+}
+
+.loading {
+    font-size: 20px;
+    font-style: italic;
+    color: black;
+    font-weight: 700;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(50deg) rotateY(-10deg) rotateZ(360deg);
+    }
+}
+
+@keyframes rotate3 {
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+
+@keyframes apparition {
+    0% {
+        visibility: visible;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
+
+
+//*** Animation check
+
+.check {
+    animation: delay;
+    z-index: 1;
+}
+
+@keyframes delay {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+
+//*** Animation cardsMenu
+
+.card1 {
+    animation-delay: 0ms;
+}
+
+.card1 {
+    animation: presentation 250ms linear forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.card2 {
+    animation-delay: 250ms;
+}
+
+.card2 {
+    animation: presentation 250ms linear forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.card3 {
+    animation-delay: 500ms;
+}
+
+.card3 {
+    animation: presentation 250ms linear forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.card4 {
+    animation-delay: 750ms;
+}
+
+.card4 {
+    animation: presentation 250ms linear forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+@keyframes presentation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}

@@ -1,0 +1,82 @@
+.restaurants {
+    background: $colour-grey2;
+    gap: 1px;
+    width: 100%;
+    padding-bottom: 50px;
+
+
+    & h2 {
+        margin-right: 23vw;
+        padding-top: 45px;
+        width: 250px;
+        font-size: 24px;
+        font-style: normal;
+        color: black;
+        font-family: $font-roboto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .restaurants {
+        padding-bottom: 5px;
+    }
+
+    .restaurants h2 {
+        margin-left: 0;
+    }
+}
+
+
+// screen cards
+
+@media only screen and (min-width: 1024px) {
+
+    .cards {
+        margin: auto;
+        gap: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        article.card {
+            height: 270px;
+        }
+
+        .article__cardImage {
+            object-fit: cover;
+            height: 190px;
+        }
+
+        .vector {
+            margin-left: 39vw;
+        }
+
+        .vector1:hover {
+            opacity: 1;
+        }
+
+        .vector1 {
+            margin-left: 39vw;
+            color: transparent;
+            background-image: linear-gradient(to top, #9356dc, #ff79da);
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        .badge {
+            margin: 54px 34vw;
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}

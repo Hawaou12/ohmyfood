@@ -1,0 +1,115 @@
+.fonctionnements {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 5vw;
+    min-width: 60px;
+    background-color: $colour-white;
+    font-weight: 700;
+    line-height: 70px;
+
+
+    &__fonctionnements {
+        counter-reset: my-counter;
+    }
+
+
+    & h2 {
+        font-family: $font-roboto;
+        width: 250px;
+        margin: 0;
+        font-size: 24px;
+        color: black;
+        font-style: normal;
+    }
+
+    .fonction {
+        display: flex;
+        flex-direction: row;
+        margin: 25px 1vw;
+        height: 15px;
+        //font-size: 18px;
+        border-radius: 20px;
+        background-color: $colour-grey2;
+        width: 80%;
+        border: none;
+        padding: 30px 30px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+        .iconGrey {
+            margin-left: 5px;
+            margin-top: -5px;
+            font-size: 20px;
+            //margin-top: -30px;
+            width: 35px;
+            color: grey;
+        }
+
+        p {
+            //font-size: 9px;
+            margin-left: -5px;
+            margin-top: -26px;
+        }
+
+        .iconViolet {
+            width: 35px;
+            margin-top: -5px;
+            font-size: 20px;
+            margin-left: 5px;
+            color: $colour-primary;
+        }
+
+
+
+        .notation {
+            @include flex-center;
+            margin-top: 11px;
+            margin-left: -20px;
+            border-radius: 20px 20px 20px 20px;
+            width: 30px;
+            content: counter(chiffres);
+            background-color: $colour-primary;
+            height: 30px;
+            color: white;
+            position: absolute;
+            transform: translate(-20px, -20px);
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .fonctionnements {
+        .fonction p {
+            font-size: 16px;
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    .fonctionnements {
+
+        .fonctionnements__fonctionnements {
+            display: flex;
+            width: 100%;
+        }
+
+        & h2 {
+            padding-left: 10px;
+        }
+
+        .fonction {
+            margin: 15px 1vw;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+
+    }
+
+
+}

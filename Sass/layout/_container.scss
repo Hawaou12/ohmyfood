@@ -1,0 +1,12 @@
+.container {
+    margin: 3vw;
+    background-color: #F7F7F7;
+
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        margin: 5vw;
+        //padding-top: 20px;
+    }
+}
